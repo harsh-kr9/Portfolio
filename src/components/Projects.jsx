@@ -1,0 +1,109 @@
+import { motion } from "framer-motion";
+import { Github, ExternalLink, Code } from "lucide-react";
+
+const Projects = () => {
+  const projects = [
+    {
+      title: "AI Image Generator",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Task Management App",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Portfolio Website",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
+      github: "#",
+      demo: "#",
+    },
+    {
+      title: "Crypto Dashboard",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800",
+      github: "#",
+      demo: "#",
+    },
+  ];
+
+  return (
+    <section id="projects" className="section-padding">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-sm font-bold uppercase tracking-[0.3em] text-blue-500 mb-4"
+            >
+              My Work
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl font-bold"
+            >
+              Featured <span className="text-zinc-500">Projects</span>
+            </motion.h3>
+          </div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-zinc-500 max-w-md"
+          >
+            A collection of projects I've built using modern web technologies and AI/ML concepts.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group relative rounded-3xl overflow-hidden glass-card h-[400px]"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              
+              <div className="absolute inset-0 flex flex-col justify-end p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-2xl font-bold text-white mb-2">{project.title}</h4>
+                  <div className="flex gap-4">
+                    <a
+                      href={project.github}
+                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
+                    >
+                      <Github size={20} />
+                    </a>
+                    <a
+                      href={project.demo}
+                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
