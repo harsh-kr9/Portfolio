@@ -44,7 +44,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-950 dark:text-white transition-colors duration-500">
+    <div className="relative min-h-screen text-zinc-950 dark:text-white transition-colors duration-500">
+      {/* Persistent Background Layer */}
+      <div className="fixed inset-0 bg-white dark:bg-zinc-950 -z-20 transition-colors duration-500" />
+      
+      <AnimatedBackground theme={theme} />
       <AnimatePresence>
         {isLoading ? (
           <motion.div
@@ -71,7 +75,6 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <AnimatedBackground theme={theme} />
             <Navbar theme={theme} toggleTheme={toggleTheme} />
             
             <main>

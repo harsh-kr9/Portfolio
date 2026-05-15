@@ -52,7 +52,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <div className="p-8 md:p-12 rounded-[40px] glass-card border-none bg-white dark:bg-zinc-900 shadow-2xl">
+            <div className="p-8 md:p-12 rounded-[40px] glass-card border-none bg-white/50 dark:bg-zinc-900/50 shadow-2xl">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">

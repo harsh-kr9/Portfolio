@@ -27,7 +27,7 @@ const CodingProfiles = () => {
   ];
 
   return (
-    <section id="profiles" className="section-padding bg-zinc-50 dark:bg-zinc-950/50">
+    <section id="profiles" className="section-padding bg-zinc-50/30 dark:bg-zinc-950/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
