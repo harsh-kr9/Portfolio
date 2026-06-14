@@ -31,7 +31,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="section-padding bg-zinc-50 dark:bg-zinc-950/50">
+    <section id="achievements" className="section-padding bg-zinc-50/30 dark:bg-zinc-950/30">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="md:w-1/3">
