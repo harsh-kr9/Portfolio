@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Code } from "lucide-react";
 import collabcodeImg from "../assets/collabcode.png";
 import quiznovaImg from "../assets/quiznova.png";
-import checkoraImg from "../assets/checkora.png";
 
 const Projects = () => {
   const projects = [
@@ -17,12 +16,6 @@ const Projects = () => {
       image: quiznovaImg,
       github: "https://github.com/harsh-kr9/QuizNova",
       demo: "https://quiz-nova-neon.vercel.app",
-    },
-    {
-      title: "Checkora",
-      image: checkoraImg,
-      github: "https://github.com/harsh-kr9/Checkora",
-      demo: "https://checkora.vercel.app",
     },
     {
       title: "Online Voting Management System",
