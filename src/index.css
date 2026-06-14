@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: oklch(0.6 0.15 250);
   --color-accent: oklch(0.7 0.2 300);
@@ -16,8 +18,7 @@
   
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "Fira Code", monospace;
-  
-  --variant-dark: &:where(.dark, .dark *);
+
 }
 
 :root {
