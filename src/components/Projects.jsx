@@ -4,27 +4,27 @@ import { Github, ExternalLink, Code } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AI Image Generator",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      demo: "#",
+      title: "CollabCode",
+      image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=800",
+      github: "https://github.com/harsh-kr9/CollabCode",
+      demo: "https://collab-code-gilt.vercel.app",
     },
     {
-      title: "Task Management App",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      demo: "#",
+      title: "QuizNova",
+      image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&q=80&w=800",
+      github: "https://github.com/harsh-kr9/QuizNova",
+      demo: "https://quiz-nova-neon.vercel.app",
     },
     {
-      title: "Portfolio Website",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800",
-      github: "#",
-      demo: "#",
+      title: "Checkora",
+      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800",
+      github: "https://github.com/harsh-kr9/Checkora",
+      demo: "https://checkora.vercel.app",
     },
     {
-      title: "Crypto Dashboard",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800",
-      github: "#",
+      title: "Online Voting Management System",
+      image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&q=80&w=800",
+      github: "https://github.com/harsh-kr9/Online-Voting-Management-System",
       demo: "#",
     },
   ];
@@ -83,18 +83,28 @@ const Projects = () => {
                 <div className="flex items-center justify-between">
                   <h4 className="text-2xl font-bold text-white mb-2">{project.title}</h4>
                   <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
-                    >
-                      <Github size={20} />
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.github && project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
+                        title="View GitHub"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.demo && project.demo !== "#" && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-zinc-950 transition-all shadow-lg"
+                        title="Live Demo"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
