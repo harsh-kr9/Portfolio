@@ -1,23 +1,26 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Code } from "lucide-react";
+import collabcodeImg from "../assets/collabcode.png";
+import quiznovaImg from "../assets/quiznova.png";
+import checkoraImg from "../assets/checkora.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "CollabCode",
-      image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&q=80&w=800",
+      image: collabcodeImg,
       github: "https://github.com/harsh-kr9/CollabCode",
       demo: "https://collab-code-gilt.vercel.app",
     },
     {
       title: "QuizNova",
-      image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&q=80&w=800",
+      image: quiznovaImg,
       github: "https://github.com/harsh-kr9/QuizNova",
       demo: "https://quiz-nova-neon.vercel.app",
     },
     {
       title: "Checkora",
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800",
+      image: checkoraImg,
       github: "https://github.com/harsh-kr9/Checkora",
       demo: "https://checkora.vercel.app",
     },
